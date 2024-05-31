@@ -1,0 +1,158 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('../../Image/welcome_page_background3.avif');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px rgba(60,64,67,0.15);
+            display: flex;
+            flex-direction: row;
+            overflow: auto;
+            height: 80vh; 
+            margin: auto;
+        }
+        .left-column, .right-column {
+            width: 50%;
+            padding: 20px;
+        }
+        .left-column {
+            border-right: 1px solid #ccc;
+        }
+        .right-column .row {
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #202124;
+        }
+        .confirm-payment {
+            margin-bottom: 20px;
+        }
+        .confirm-payment button {
+            padding: 10px 20px;
+            background-color: #248671;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        .confirm-payment button:hover {
+            background-color: #2ba053;
+        }
+        .input-pin {
+            margin-top: 10px;
+        }
+        .input-pin input {
+            padding: 10px;
+            font-size: 16px;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+        }
+        .user-details {
+            font-size: 16px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .button-group {
+            text-align: center;
+        }
+        .button-group button, .button-group a{
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #248671;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: calc(100% - 10px);
+            box-sizing: border-box;
+        }
+        #ok-button, #confirm-button{
+            display:inline-flexbox;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #248671;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: calc(100% - 10px);
+            box-sizing: border-box;
+        }
+        .button-group button:hover, .button-group a:hover {
+            background-color: green;
+        }
+        .exit-button {
+            background-color: #d9534f;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+        .footer-company-name {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+            color: #fff;
+            text-align: center;
+        }
+        /* Styles for Database Records */
+        .record-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .record-table th, .record-table td, .record-table caption {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .record-table caption{
+            background-color: rgba(45, 161, 118, 1);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .record-table th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #248671;
+            color: white;
+        }
+        #back-button:hover{
+            background-color: red;
+
+        }

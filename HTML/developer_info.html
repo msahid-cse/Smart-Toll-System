@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('Image/welcome_page_background3.avif') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
+      overflow: auto; /* Allow vertical scrolling */
+    }
+
+    .container {
+      width: 60%;
+      margin: 5% auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      overflow: auto; /* Allow content to be scrollable if necessary */
+    }
+
+    .row {
+      padding: 20px;
+      border-bottom: 1px solid #555;
+      text-align: center;
+    }
+
+    .row:last-child {
+      border-bottom: none;
+    }
+
+    .info h2 {
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    .icons a {
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .icons img {
+      width: 32px;
+      height: 32px;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    textarea {
+      width: 80%;
+      height: 60px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none; /* Prevent resizing */
+    }
+
+    .button-container {
+      display:flexbox;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #00a07d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #03dd94;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px 0;
+      object-fit: cover;
+    }
+    footer {
+
+            text-align: center;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+        .footer-company-name {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+            text-align: center;
+        }
+
+    /* .profile-pic:hover {
+      transition: width 1s, height 1s;
+      width: 180px;
+      height: 180px;
+    } */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="info">
+        <h2>Developed by,</h2>
+        <img src="Image/sahid.png" alt="Developer" class="profile-pic">
+        <p>Md. Sahid</p>
+        <p>ID: 221902057</p>
+        <p>Department: Computer Science and Engineering</p>
+        <p>Green University of Bangladesh</p>
+        <p>Email: msahid.cse@gmail.com || Phone: 01407531529</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/msahid.cse" target="_blank"><img src="Image/facebook.png" alt="Facebook"></a>
+          <a href="https://github.com/msahid-cse" target="_blank"><img src="Image/github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/msahid-cse" target="_blank"><img src="Image/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://wa.me/01407531529" target="_blank"><img src="Image/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <h2>Instructed by,</h2>
+        <img src="Image/sharif.jpg" alt="Instructor" class="profile-pic">
+        <p>Sharifur Rahman</p>
+        <p>Lecturer, Department of CSE</p>
+        <p>Green University of Bangladesh</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/sharif.rahman.969" target="_blank"><img src="Image/facebook.png" alt="Facebook"></a>
+          <a href="https://linkedin.com/in/sharif-ur/" target="_blank"><img src="Image/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form id="feedbackForm">
+        <h2>Feedback or Suggestion</h2>
+        <textarea name="feedback" required></textarea>
+        <div class="button-container">
+          <button type="button" onclick="location.href='../welcome.html'">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+    
+  </div>
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+
+      // Get the feedback value
+      const feedback = event.target.feedback.value;
+
+      // Create a FormData object
+      const formData = new FormData();
+      formData.append('feedback', feedback);
+
+      // Send the data to the server using Fetch API
+      fetch('../submit_feedback.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert('Feedback submitted successfully!');
+        // Clear the textarea
+        event.target.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+        <footer>
+          <p class="footer-company-name"><strong>&copy; 2024. Smart Toll System.</strong> All Rights Reserved.</p>
+      </footer>
+</body>
+</html>

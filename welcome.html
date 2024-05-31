@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Image/STS.png" type="image/jpeg">
+    <style>
+        body {
+            background-image: url('Image/welcome_page_background3.avif');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.5);
+            position: absolute;
+            top: 28%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin: 10px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .top-right-links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-right-links a {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .top-right-links a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .top-left-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .top-left-logo img {
+            height: 30px;
+            width: 60px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0px 0 5px 0;
+        }
+        .footer-company-name {
+            position: absolute;
+            top: 10px;
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-left-logo">
+            <img src="Image/STS..png" alt="Smart Toll System Logo">
+    </div>
+    <div class="top-right-links">
+        <a href="HTML/terms_and_conditions.html">Terms and Conditions</a>
+        <a href="HTML/documentation.html">Documentation</a>
+        <a href="HTML/about_us.html">About Us</a>
+        <a href="HTML/developer_info.html">Developer Info</a>
+    </div>
+    <div class="container">
+        <h1>Welcome to Smart Toll System</h1>
+        <p>(For Padma Bridge)</p>
+        <button id="adminLoginBtn" class="btn">Admin Login</button>
+        <button id="userLoginBtn" class="btn">User Login</button>
+    </div>
+    <script>
+        // Handle admin login button click
+        document.getElementById('adminLoginBtn').addEventListener('click', function() {
+            window.location.href = 'ADMIN/PHP/admin_login.php';
+        });
+
+        // Handle user login button click
+        document.getElementById('userLoginBtn').addEventListener('click', function() {
+            window.location.href = 'USER/PHP/user_login.php';
+        });
+    </script>
+    <footer>
+        <p class="footer-company-name"><strong>&copy; 2024. Smart Toll System</strong> All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

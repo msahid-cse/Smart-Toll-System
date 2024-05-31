@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Toll System Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Image/welcome_page_background3.avif') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            width: 80%;
+            max-height: 100vh;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        h1, h2, h3 {
+            color: rgba(0, 156, 122,1);
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color:rgba(0, 156, 122,1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: rgb(0, 141, 118);
+            transform: scale(1.1);
+        }
+        .content {
+            margin-top: 20px;
+        }
+        footer {
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+        }
+        #footer-company-name {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../welcome.html" class="back-button">Back to Welcome Page</a>
+        <h1>Smart Toll System Project Documentation</h1>
+        <div class="content">
+            <h2 id="introduction">Introduction</h2>
+            <p>The <strong>Smart Toll System</strong> is a web-based application designed to streamline the toll collection process for vehicles using both online and offline methods. This system offers a user-friendly interface for administrators to manage toll collections, vehicle records, and financial reports, while providing a convenient platform for users to register their vehicles, pay toll fees online, and manage their accounts.</p>
+
+            <h2 id="project-overview">Project Overview</h2>
+            <p>The Smart Toll System features two main user roles:</p>
+            <ul>
+                <li><strong>Admin</strong>: Responsible for managing the overall toll system, including collecting fees, maintaining records, and generating reports.</li>
+                <li><strong>Normal User</strong>: Vehicle owners who register their vehicles and pay toll fees online through a secure payment gateway.</li>
+            </ul>
+            <p>The system is developed using:</p>
+            <ul>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript</li>
+                <li><strong>Backend</strong>: PHP</li>
+                <li><strong>Database</strong>: MySQL</li>
+            </ul>
+
+            <h2 id="system-architecture">System Architecture</h2>
+            <p>The system architecture consists of a client-server model where the frontend interacts with the backend server, which in turn communicates with the MySQL database to perform various operations.</p>
+
+            <h2 id="technologies-used">Technologies Used</h2>
+            <ul>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript for building the user interface.</li>
+                <li><strong>Backend</strong>: PHP for server-side scripting and handling business logic.</li>
+                <li><strong>Database</strong>: MySQL for data storage and management.</li>
+                <li><strong>Payment Gateway</strong>: Integration with an online banking system for secure transactions.</li>
+            </ul>
+
+            <h2 id="features">Features</h2>
+            <h3 id="admin-panel">Admin Panel</h3>
+            <p>The Admin Panel provides comprehensive control over the toll system with the following features:</p>
+            <ul>
+                <li><strong>Collect Toll Fee Offline</strong>: Administrators can manually record toll fees collected offline.</li>
+                <li><strong>View Vehicle Passing Records</strong>: Track the number of vehicles passing through the toll.</li>
+                <li><strong>Financial Reports</strong>: Generate reports on total income and other financial metrics.</li>
+                <li><strong>Database Management</strong>:
+                    <ul>
+                        <li><strong>Collected Toll Records</strong>: View and manage all toll fee records.</li>
+                        <li><strong>Online User Records</strong>: Access and manage records of users who pay toll fees online.</li>
+                    </ul>
+                </li>
+                <li><strong>Search Functionality</strong>:
+                    <ul>
+                        <li><strong>By License Number</strong>: Search for specific vehicle records using the license number.</li>
+                        <li><strong>By Date</strong>: Search for toll records based on specific dates.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 id="user-panel">User Panel</h3>
+            <p>The User Panel offers a seamless experience for vehicle owners with the following functionalities:</p>
+            <ul>
+                <li><strong>Registration</strong>: Users can register their vehicles by providing the license number and payment details.</li>
+                <li><strong>Login</strong>: Secure user authentication for accessing personal accounts.</li>
+                <li><strong>Online Toll Payment</strong>: Users can easily pay toll fees through the integrated online banking system.</li>
+                <li><strong>Account Management</strong>:
+                    <ul>
+                        <li><strong>Edit Account</strong>: Update personal and vehicle information.</li>
+                        <li><strong>Remove Account</strong>: Option to delete the user account.</li>
+                    </ul>
+                </li>
+                <li><strong>Payment History</strong>: View a detailed history of all toll payments made.</li>
+            </ul>
+
+            <h2 id="database-design">Database Design</h2>
+            <p>The database consists of several tables to manage different aspects of the system:</p>
+            <ul>
+                <li><strong>Users</strong>: Stores user information and account details.</li>
+                <li><strong>Vehicles</strong>: Contains records of registered vehicles.</li>
+                <li><strong>Toll Records</strong>: Tracks toll fee transactions and vehicle passage details.</li>
+                <li><strong>Admin</strong>: Manages admin credentials and access controls.</li>
+            </ul>
+
+            <h2 id="system-functionality">System Functionality</h2>
+            <h3 id="admin-panel-functionalities">Admin Panel Functionalities</h3>
+            <ul>
+                <li><strong>Dashboard</strong>: Overview of key metrics such as total vehicles passed and total income.</li>
+                <li><strong>Toll Collection</strong>: Interface for recording toll fees collected offline.</li>
+                <li><strong>Records Management</strong>:
+                    <ul>
+                        <li><strong>View Collected Toll Records</strong>: Access detailed records of all toll collections.</li>
+                        <li><strong>View Online User Records</strong>: Manage information of users who pay tolls online.</li>
+                    </ul>
+                </li>
+                <li><strong>Search Tool</strong>:
+                    <ul>
+                        <li><strong>By License Number</strong>: Quickly find specific vehicle records.</li>
+                        <li><strong>By Date</strong>: Locate toll records from specific dates for auditing and reporting.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 id="user-panel-functionalities">User Panel Functionalities</h3>
+            <ul>
+                <li><strong>Registration and Login</strong>: Secure registration and login process for vehicle owners.</li>
+                <li><strong>Toll Payment</strong>: Integrated payment gateway for seamless online toll fee payment.</li>
+                <li><strong>Account Settings</strong>:
+                    <ul>
+                        <li><strong>Edit Profile</strong>: Users can update their personal and vehicle information.</li>
+                        <li><strong>Delete Account</strong>: Users can opt to remove their account from the system.</li>
+                    </ul>
+                </li>
+                <li><strong>Payment History</strong>: Access to a comprehensive list of all past toll payments.</li>
+            </ul>
+
+            <h2 id="security-measures">Security Measures</h2>
+            <p>To ensure the security and integrity of the system, several measures are implemented:</p>
+            <ul>
+                <li><strong>Data Encryption</strong>: Secure storage and transmission of sensitive data.</li>
+                <li><strong>User Authentication</strong>: Strong password policies and session management.</li>
+                <li><strong>Input Validation</strong>: Prevent SQL injection and other common web vulnerabilities.</li>
+                <li><strong>Secure Payment Gateway</strong>: Integration with trusted online banking systems to handle transactions.</li>
+            </ul>
+
+            <h2 id="installation-and-setup">Installation and Setup</h2>
+            <h3 id="prerequisites">Prerequisites</h3>
+            <ul>
+                <li>Web Server (e.g., Apache)</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+            </ul>
+            <h3 id="steps">Steps</h3>
+            <ol>
+                <li>Clone or download the project files.</li>
+                <li>Set up the database by importing the provided SQL scripts.</li>
+                <li>Configure the database connection settings in the PHP files.</li>
+                <li>Deploy the project on the web server.</li>
+                <li>Access the application through the browser to begin using the Smart Toll System.</li>
+            </ol>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>The Smart Toll System provides an efficient and secure way to manage toll collections and vehicle records. With comprehensive functionalities for both administrators and users, the system enhances the toll management process and offers a convenient platform for online toll payments. This documentation serves as a detailed guide for understanding, installing, and using the Smart Toll System.</p>
+
+            <a href="../welcome.html" class="back-button">Back to Welcome Page</a>
+        </div>
+    </div>
+    <footer>
+        <p id="footer-company-name"><strong>&copy; 2024. Smart Toll System</strong> All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
